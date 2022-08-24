@@ -32,6 +32,10 @@ class BooksAdapter:RecyclerView.Adapter<BooksViewHolder>() {
         notifyItemInserted(position)
 
     }
+    fun updateItemAt(position: Int,item: Book){
+        bookList[position] = item
+        notifyItemChanged(position)
+    }
 
     fun setOnItemClickListener(listener:((Book)->Unit)?){
         onItemClickListener=listener
