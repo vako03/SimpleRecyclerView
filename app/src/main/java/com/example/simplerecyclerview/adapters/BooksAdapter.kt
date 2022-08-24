@@ -12,6 +12,8 @@ import com.example.simplerecyclerview.databinding.LayoutBookItemBinding
 class BooksAdapter:RecyclerView.Adapter<BooksViewHolder>() {
      var bookList = mutableListOf<Book>()
 
+    private  var onItemClickListener:((Book)->Unit)? = null
+
     fun updateList(list: List<Book>){
         bookList.addAll(list)
         notifyDataSetChanged()
@@ -30,10 +32,17 @@ class BooksAdapter:RecyclerView.Adapter<BooksViewHolder>() {
         notifyItemInserted(position)
 
     }
+
+    fun setOnItemClickListener(listener:((Book)->Unit)?){
+        onItemClickListener=listener
+    }
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
         val bookItem = bookList[position]
         holder.binding.tvBookName.text = bookItem.bookName
         Glide.with(holder.binding.root).load(bookItem.posterImage).into(holder.binding.ivPoster)
+        holder.binding.root.setOnClickListener{
+            onItemClickListener?.invoke(bookItem)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -2,6 +2,7 @@ package com.example.simplerecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.simplerecyclerview.adapters.Book
 import com.example.simplerecyclerview.adapters.BooksAdapter
 import com.example.simplerecyclerview.databinding.ActivityMainBinding
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
             val book = Book("Book Lovers","https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638867089l/58690308.jpg")
             booksAdapter.insertItem(book,1)
 
+
+        }
+        booksAdapter.setOnItemClickListener {
+            Toast.makeText(this,it.bookName,Toast.LENGTH_LONG).show()
         }
     }
 }
