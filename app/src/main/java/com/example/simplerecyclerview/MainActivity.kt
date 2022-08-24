@@ -29,5 +29,13 @@ class MainActivity : AppCompatActivity() {
             Book("You Know Better","https://ia600802.us.archive.org/view_archive.php?archive=/8/items/olcovers2/olcovers2-L.zip&file=26439-L.jpg"),
 
         ))
+        binding.tvDelete.setOnClickListener{
+            booksAdapter.deleteItem(0)
+        }
+        binding.tvAdd.setOnClickListener{
+            val book = Book("Book Lovers","https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638867089l/58690308.jpg")
+            booksAdapter.insertItem(book,1)
+
+        }
     }
 }

@@ -21,7 +21,15 @@ class BooksAdapter:RecyclerView.Adapter<BooksViewHolder>() {
         return BooksViewHolder(LayoutBookItemBinding.inflate(LayoutInflater.from(parent.context),
         parent,false))
     }
+    fun deleteItem(position: Int){
+        bookList.removeAt(position)
+        notifyItemRemoved(position)
+    }
+    fun insertItem(item:Book,position:Int){
+        bookList.add(position,item)
+        notifyItemInserted(position)
 
+    }
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
         val bookItem = bookList[position]
         holder.binding.tvBookName.text = bookItem.bookName
