@@ -4,54 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvDelete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/delete_item"
-        android:layout_marginStart="10dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvAdd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/add_item"
-        android:layout_marginEnd="10dp"/>
+        android:id="@+id/tvActivity"
+        android:text="Tis is activity"
+        android:textSize="30sp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvUpdate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toEndOf="@id/tvDelete"
-        app:layout_constraintEnd_toStartOf="@id/tvAdd"
-        android:text="@string/update"
-       />
 
-    <View
-        android:id="@+id/endSpace"
+    <fragment
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/white"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/fragmentBookList"
+        android:name="com.example.simplerecyclerview.BookListFragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

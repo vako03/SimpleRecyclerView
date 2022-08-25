@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Vuka/Desktop/SimpleRecyclerView/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Vuka/Desktop/SimpleRecyclerView/app/src/main/res/layout/fragment_book_list.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Vuka/Desktop/SimpleRecyclerView/app/src/main/res/layout/fragment_book_list2.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Vuka/Desktop/SimpleRecyclerView/app/src/main/res/layout/layout_book_item.xml" value="0.17447916666666666" />
       </map>
     </option>
