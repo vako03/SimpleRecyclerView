@@ -17,23 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bookListFragment = BookListFragment()
-        val booksDetailsFragment = BooksDetailsFragment()
 
-        binding.buttonFragmentList.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragments,bookListFragment)
-                addToBackStack(bookListFragment::class.java.name)
+                addToBackStack(bookListFragment.javaClass.name)
                 commit()
             }
         }
-
-        binding.buttonFragmentDetails.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragments,booksDetailsFragment)
-                addToBackStack("fragment 2")
-
-                commit()
-    }
         }
-        }
-}
+

@@ -19,6 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivBigPoster"
         android:layout_marginTop="20dp"
         android:text="Thomesing"
+        android:id="@+id/tvBookName"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
