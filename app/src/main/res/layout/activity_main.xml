@@ -8,23 +8,34 @@
     tools:context=".MainActivity">
 
 
-    <TextView
+
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/buttonFragmentList"
+        android:text="List Fragment"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonFragmentDetails"
+        android:text="Details Fragment"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/tvActivity"
-        android:text="Tis is activity"
-        android:textSize="30sp"/>
+        android:layout_marginEnd="20dp"/>
 
 
-    <fragment
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvActivity"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFragmentDetails"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/fragmentBookList"
-        android:name="com.example.simplerecyclerview.BookListFragment"/>
+        android:id="@+id/flFragments"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
